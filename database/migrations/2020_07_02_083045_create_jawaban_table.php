@@ -15,7 +15,7 @@ class CreateJawabanTable extends Migration
     {
         Schema::create('jawaban', function (Blueprint $table) {
             $table->Increments('id');
-            $table->integer('pertanyaan_id')->nullable();
+            $table->foreignId('pertanyaan_id')->nullable();
             $table->string('isi')->nullable();
             $table->timestamps();
 
